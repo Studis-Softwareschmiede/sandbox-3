@@ -8,7 +8,7 @@ smoke: "curl -fsS -o /dev/null -w '%{http_code}' http://localhost:8080/"
 merge_policy: pr
 board: <PROJECT_NUMMER>
 deploy: docker
-image: ghcr.io/studis-softwareschmiede/<name>
+image: ghcr.io/studis-softwareschmiede/sandbox-3
 registry: ghcr
 container_port: 80    # Port im Container (nginx); /preview mappt host:container
 # preview_port: <wird von /preview up vergeben (erste freie ab 8080) und hier eingetragen>
