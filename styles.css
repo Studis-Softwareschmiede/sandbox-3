@@ -5,6 +5,7 @@
   --color-muted: #45525e;
   --color-accent: #0a4a8f;
   --color-border: #c2ccd6;
+  --color-error: #b00020;
 
   --space-1: 0.5rem;
   --space-2: 1rem;
@@ -102,6 +103,12 @@ input[type="number"]:focus-visible {
   font-size: var(--font-xl);
   font-weight: 700;
   color: var(--color-accent);
+}
+
+.error {
+  margin: var(--space-2) 0 0;
+  font-weight: 600;
+  color: var(--color-error);
 }
 
 .visually-hidden {

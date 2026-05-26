@@ -23,7 +23,7 @@ Eine statische Seite, auf der man einen Temperaturwert in Grad Celsius eingibt u
 - **AC1** — Es gibt ein numerisches Eingabefeld für Grad Celsius und eine sichtbare Ausgabe für Grad Fahrenheit.
 - **AC2** — Für eine gültige Zahl wird `°F = °C × 9/5 + 32` korrekt berechnet und angezeigt (Referenzwerte: `100 → 212`, `0 → 32`, `-40 → -40`).
 - **AC3** — Die Umrechnung erfolgt clientseitig ohne Seitenneuladen (live bei Eingabe oder per Umrechnen-Button).
-- **AC4** — Bei leerer oder nicht-numerischer Eingabe wird statt eines Werts eine verständliche Fehlermeldung angezeigt; sobald wieder eine gültige Zahl eingegeben wird, erscheint der korrekte °F-Wert.
+- **AC4** — Bei leerer oder nicht-numerischer Eingabe wird statt eines Werts eine verständliche Fehlermeldung angezeigt (konkreter Wortlaut: „Bitte eine gültige Zahl eingeben."); sobald wieder eine gültige Zahl eingegeben wird, erscheint der korrekte °F-Wert.
 
 ## Verträge
 - **Eingabe:** ein Zahlenwert °C (Eingabefeld).
