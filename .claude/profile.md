@@ -11,4 +11,4 @@ deploy: docker
 image: ghcr.io/studis-softwareschmiede/sandbox-3
 registry: ghcr
 container_port: 80    # Port im Container (nginx); /preview mappt host:container
-# preview_port: <wird von /preview up vergeben (erste freie ab 8080) und hier eingetragen>
+preview_port: 8081
