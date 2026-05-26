@@ -2,7 +2,7 @@
 id: celsius-fahrenheit
 title: Celsius → Fahrenheit Umrechner
 status: active
-version: 1
+version: 2
 ---
 
 # Spec: Celsius → Fahrenheit Umrechner  (`celsius-fahrenheit`)
@@ -17,11 +17,13 @@ Eine statische Seite, auf der man einen Temperaturwert in Grad Celsius eingibt u
 - Given die Seite ist geladen, When der Nutzer eine Zahl ins Celsius-Feld eingibt, Then erscheint der berechnete Fahrenheit-Wert.
 - Die Umrechnung folgt der Formel **°F = °C × 9/5 + 32**.
 - Die Anzeige aktualisiert sich **ohne Seitenneuladen**.
+- Given das Celsius-Feld ist leer oder enthält keine gültige Zahl, When sich die Eingabe ändert, Then wird **kein** berechneter Wert angezeigt, sondern eine verständliche Fehlermeldung.
 
 ## Acceptance-Kriterien
 - **AC1** — Es gibt ein numerisches Eingabefeld für Grad Celsius und eine sichtbare Ausgabe für Grad Fahrenheit.
 - **AC2** — Für eine gültige Zahl wird `°F = °C × 9/5 + 32` korrekt berechnet und angezeigt (Referenzwerte: `100 → 212`, `0 → 32`, `-40 → -40`).
 - **AC3** — Die Umrechnung erfolgt clientseitig ohne Seitenneuladen (live bei Eingabe oder per Umrechnen-Button).
+- **AC4** — Bei leerer oder nicht-numerischer Eingabe wird statt eines Werts eine verständliche Fehlermeldung angezeigt; sobald wieder eine gültige Zahl eingegeben wird, erscheint der korrekte °F-Wert.
 
 ## Verträge
 - **Eingabe:** ein Zahlenwert °C (Eingabefeld).
@@ -30,13 +32,16 @@ Eine statische Seite, auf der man einen Temperaturwert in Grad Celsius eingibt u
 
 ## Edge-Cases & Fehlerverhalten
 - Negative Werte und Null sind gültige Eingaben (siehe Referenzwerte).
+- Leere Eingabe und nicht-numerische Eingabe → Fehlermeldung statt Wert (AC4).
 
 ## NFRs
 - Rein clientseitig (statisches HTML/JS), keine Netzwerkaufrufe.
 
 ## Nicht-Ziele
-- **Eingabe-Validierung / Fehlermeldungen bei nicht-numerischer oder leerer Eingabe** — bewusst NICHT Teil dieser Version (separate Spec).
 - Fahrenheit → Celsius (Rückrichtung).
+
+## Änderungshistorie
+- **v2** — Eingabe-Validierung/Fehlermeldung (AC4) aufgenommen (war in v1 Nicht-Ziel).
 
 ## Abhängigkeiten
 - keine.
