@@ -1,0 +1,3 @@
+# Coder-Lessons (projekt-lokal, newest first)
+
+- **Gold-Plating über die Spec hinaus → Spec-Drift.** Wiederkehrend beobachtet: der coder ergänzt „nützliches" Verhalten, das die Spec NICHT verlangt — teils sogar ausdrücklich als *Nicht-Ziel* geführt (z. B. Eingabe-Validierung/Fehlermeldung für leere/nicht-numerische Eingabe, obwohl die Spec das als Nicht-Ziel listet). Folge: reviewer meldet Spec-Drift → `CHANGES-REQUIRED` → Zusatz-Iteration. Regel fürs Bauen: **strikt nur die genannten AC erfüllen**; als Nicht-Ziel markiertes Verhalten NICHT bauen; fehlt etwas, ist das eine **SPEC-LÜCKE** (zurück an `requirement`), kein eigenmächtiges Ergänzen. (Item #1 — Muster, das ohne Gegensteuern wiederkehrt.)
